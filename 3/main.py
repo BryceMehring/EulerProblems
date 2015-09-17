@@ -2,15 +2,9 @@
 # TODO: this could be cleaned up and checked for correctness even though it gives the correct answer
 import math
 
-# http://stackoverflow.com/a/2489519
 def IsSquare(apositiveint):
-  x = apositiveint // 2
-  seen = set([x])
-  while x * x != apositiveint:
-    x = (x + (apositiveint // x)) // 2
-    if x in seen: return False
-    seen.add(x)
-  return True
+    squareRoot = int(math.sqrt(apositiveint))
+    return apositiveint == (squareRoot * squareRoot)
 
 def FermatFactor(N):
     if N % 2 == 0:
@@ -19,10 +13,7 @@ def FermatFactor(N):
     a = math.ceil(math.sqrt(N))
     b2 = a * a - N
 
-    if a <= 1:
-        return None
-
-    while IsSquare(b2) == False:
+    while b2 > 1 and IsSquare(b2) == False:
         a += 1
         b2 = a*a - N
     return a - math.sqrt(b2), a + math.sqrt(b2)
@@ -39,6 +30,6 @@ def largestPrimeFactor(N):
         return max(A, B)
 
 def main():
-    print largestPrimeFactor(600851475143)
+    print int(largestPrimeFactor(600851475143))
 
 main()
