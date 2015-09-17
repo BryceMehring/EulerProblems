@@ -18,4 +18,5 @@ def smallestMultiple(minNum, maxNum):
 
 def main():
     print smallestMultiple(2, 10)
+
 main()
