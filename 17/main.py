@@ -46,7 +46,7 @@ def numToWord(n):
             #100 - 999
             hundredPart = numToWord(int(strNum[0])) + ' hundred'
             tensPart = numToWord(int(strNum[1:]))
-            if len(tensPart) <= 0:
+            if len(tensPart) > 0:
                 return hundredPart + ' and ' + tensPart
             else:
                 return hundredPart
