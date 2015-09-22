@@ -27,4 +27,5 @@ def main():
                 numbers.append(int(number))
 
     print maximumPathSum(numbers)
+    
 main()
