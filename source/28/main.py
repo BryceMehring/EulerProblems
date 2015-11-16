@@ -1,7 +1,5 @@
 # https://projecteuler.net/problem=28
 
-gridSize = 5
-
 def printGrid(numbers):
     for line in numbers:
         print line
