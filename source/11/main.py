@@ -29,7 +29,7 @@ def largestProductInGrid(grid):
     return greatestProduct
 
 def main():
-    grid = loadGrid('grid.txt')
+    grid = loadGrid('source/11/grid.txt')
     print largestProductInGrid(grid)
 
 

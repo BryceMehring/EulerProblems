@@ -22,7 +22,7 @@ def largestAdjacentProduct(bigNumber, length):
     }
 
 def main():
-    with open('big_number.txt') as f:
+    with open('source/08/big_number.txt') as f:
         bigNumber = f.read()
         print largestAdjacentProduct(bigNumber, 13)
 

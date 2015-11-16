@@ -21,11 +21,11 @@ def maximumPathSum(numbers, index = 0, depth = 0):
 
 def main():
     numbers = []
-    with open('triangle.txt') as f:
+    with open('source/18/triangle.txt') as f:
         for line in f:
             for number in line.split():
                 numbers.append(int(number))
 
     print maximumPathSum(numbers)
-    
+
 main()

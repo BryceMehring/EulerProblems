@@ -4,7 +4,7 @@ def charToIndex(c):
     return ord(c) - 64
 
 def main():
-    with open('22/names.txt') as f:
+    with open('source/22/names.txt') as f:
         names = f.read()
         names = names.replace('"', '')
         nameArray = names.split(',')
