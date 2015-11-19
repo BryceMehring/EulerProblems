@@ -13,3 +13,17 @@ def sieve_of_erat(n):
                 primes[j] = False
 
     return [i for i, v in enumerate(primes) if v and i > 1]
+
+def isPandigital(args, length):
+    numberStr = None
+    if type(args) == list:
+        numberStr = reduce(lambda x, y: str(x) + str(y), args)
+    elif type(args) == int:
+        numberStr = str(args)
+
+    if numberStr and length and len(numberStr) == length:
+        for i in range(1, len(numberStr) + 1):
+            if str(i) not in numberStr:
+                return False
+
+        return True
