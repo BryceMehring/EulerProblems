@@ -16,7 +16,7 @@ def main():
         if len(results) > maxSolutions:
             maxSolutions = len(results)
             maxIndex = i
-        print i
+
     print maxIndex
 
 main()
