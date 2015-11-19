@@ -1,8 +1,5 @@
 # Problem 22: https://projecteuler.net/problem=22
 
-def charToIndex(c):
-    return ord(c) - 64
-
 def main():
     with open('source/22/names.txt') as f:
         names = f.read()
@@ -13,7 +10,7 @@ def main():
         for i, name in enumerate(nameArray):
             nameTotal = 0
             for c in name:
-                nameTotal += charToIndex(c)
+                nameTotal += common.charToIndex(c)
             total += nameTotal * (i + 1)
         print total
 
