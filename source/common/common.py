@@ -17,7 +17,7 @@ def sieve_of_erat(n):
 def isPandigital(args, length):
     numberStr = None
     if type(args) == list:
-        numberStr = reduce(lambda x, y: str(x) + str(y), args)
+        numberStr = arrayToString(args)
     elif type(args) == int:
         numberStr = str(args)
 
@@ -27,3 +27,9 @@ def isPandigital(args, length):
                 return False
 
         return True
+
+def charToIndex(c):
+    return ord(c) - 64
+
+def arrayToString(args, separator = ''):
+    return separator.join(map(lambda x: str(x), args))
