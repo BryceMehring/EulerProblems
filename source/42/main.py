@@ -1,9 +1,9 @@
 import math
 
 def isTriangleNumber(n):
-    sqrtValue = (-0.5) ** 2 + (4 * 0.5 * n)
-    denominator = (2 * -0.5)
-    if sqrtValue >= 0 and denominator != 0:
+    sqrtValue = 0.25 + (2 * n)
+    denominator = -1
+    if sqrtValue >= 0:
         result = ((0.5 + math.sqrt(sqrtValue)) / denominator, (0.5 - math.sqrt(sqrtValue)) / denominator)
         if (result[0] > 0 and result[0].is_integer()) or (result[1] > 0 and result[1].is_integer()):
             return True
@@ -19,7 +19,7 @@ def main():
                 total += common.charToIndex(c)
             if isTriangleNumber(total):
                 triangleWordCounter += 1
-                
+
         print triangleWordCounter
 
 main()
